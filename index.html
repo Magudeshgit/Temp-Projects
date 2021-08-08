@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #141414;
+			min-height: 100vh;
+			font-family: arial;
+		}
+		.quote
+		{
+			color: white;
+			font-size: 32px;
+			max-width: 800px;
+			text-align: center;
+			letter-spacing: 0.5px;
+		}
+		.toggle-btn
+		{
+			position: fixed;
+			top: 20px;
+			right: 20px;
+		}
+		.switch
+		{
+            color: white;
+			font-size: 20px;
+			max-width: 100px;
+			text-align: center;
+			letter-spacing: 0.5px;
+		}
+	</style>
+</head>
+<body>
+	<p class="quote"></p>
+	<script>
+		let quotesrc = document.querySelector('.quote')
+let quote = 
+[
+  '" The Greatest Glory Living Lies Not In Fever Falling, But In Rising Everytime We Fall. " -Nelson Mandela',
+
+   '" The Way To Get Started Is To quit Talking And Begin Doing.  -Walt Disney',
+
+   ' If Life Were Predictable It Would Cease To Be Life, And Be Without Flavor  -Eleanor Roosevelt',
+   'Knowledge Is Wealth',
+   'If you set your goals ridiculously high and its a failure, you will fail above everyone else success." -James Cameron',
+   'Spread love everywhere you go. Let no one ever come to you without leaving happier. -Mother Teresa',
+   'When you reach the end of your rope, tie a knot in it and hang on. -Franklin D. Roosevelt',
+   'Always remember that you are absolutely unique. Just like everyone else. -Margaret Mead',
+   'Dont judge each day by the harvest you reap but by the seeds that you plant. -Robert Louis Stevenson',
+   'The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt',
+   'Tell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin Franklin',
+
+];
+
+function myFunction() {
+	var randomquote = quote[Math.floor(Math.random() * quote.length)]
+	quotesrc.innerHTML = randomquote;
+}
+myFunction()
+setInterval(myFunction, 20000)
+
+
+	</script>
+</body>
+</html>
